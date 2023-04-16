@@ -160,7 +160,7 @@ main {
 .oh__inner {
 	display: inline-block;
 	transform-origin: 0% 50%;
-	will-change: transform;
+	
 }
 
 .content {
