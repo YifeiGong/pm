@@ -1,123 +1,492 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Faye Gong | PM Portfolio</title>
-      <meta name="description" content="Some experimental reveal animations on typographic elements as repeating pattern for a website design.">
-      <meta name="keywords" content="reveal, gsap, animation, web design, menu animation">
-      <meta name="author" content="Codrops">
-      <link rel="icon shortcut" href="icon.png">
-      <link rel="stylesheet" type="text/css" href="index.320bd6f3.css">
-      <script>!function(){document.documentElement.className="js";var e,t;(t=document.createElement("style")).innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e||alert("Please view this demo in a modern browser that supports CSS Variables.")}();</script>
-   </head>
-   <body class="loading">
-      <main>
-         <div class="frame">
-            <h1 class="frame__title">Background in design, engineering and marketing.</h1>
-            <nav class="frame__links">
-               <a href="http://tympanus.net/Tutorials/text-trail-effect/">About</a>
-               <a href="http://tympanus.net/Tutorials/text-trail-effect/">Resume</a>
-               <a href="https://tympanus.net/codrops/?p=55661">Linkedin</a>
-               <a href="https://github.com/codrops/SuperfluidLayout">GitHub</a> 
-            </nav>
-         </div>
-         <nav class="menu">
-            <span class="menu__item oh"><a class="menu__item-link oh__inner" href="#details-2">JeFit.com</a></span>
-         	<span class="menu__item oh"><a class="menu__item-link oh__inner" href="#details-3">Microsoft/Bing.com</a></span> 
-         	<span class="menu__item oh"><a class="menu__item-link oh__inner" href="#details-4">Sunlands.com</a></span> 
-         	<span class="menu__item oh"><a class="menu__item-link oh__inner" href="#details-5">Qyer.com</a></span> 
-         	<span class="menu__item oh"><a class="menu__item-link oh__inner" href="#details-6">Interest in AI</a></span> 
-            <span class="menu__item oh"><a class="menu__item-link oh__inner" href="#details-7">About Faye</a></span> 
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Faye Gong Product Lead | Portfolio</title>
+		<meta name="description" content="Faye Gong Product Lead | Portfolio" />
+		<meta name="keywords" content="template, web design, html, javascript, layout, css, slide out" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="icon.png">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+		<!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
+	</head>
+	<body class="loading">
+		<svg class="hidden">
+			<symbol id="icon-arrow" viewBox="0 0 24 24">
+				<title>arrow</title>
+				<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "/>
+			</symbol>
+			<symbol id="icon-drop" viewBox="0 0 24 24">
+				<title>drop</title>
+				<path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"/><path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"/>
+			</symbol>
+			<symbol id="icon-menu" viewBox="0 0 24 13">
+				<title>menu</title>
+				<path d="M.75 1.515h22.498a.75.75 0 0 0 0-1.5H.75a.75.75 0 0 0 0 1.5zM23.248 5.265H8.168a.75.75 0 0 0 0 1.5h15.08a.75.75 0 0 0 0-1.5zM23.248 10.514H4.322a.75.75 0 0 0 0 1.5h18.926a.75.75 0 0 0 0-1.5z"/>
+			</symbol>
+			<symbol id="icon-dot" viewBox="0 0 24 24">
+				<title>dot</title>
+				<path d="M11.5 9c-.69 0-1.28.244-1.768.732A2.41 2.41 0 0 0 9 11.5c0 .69.244 1.28.732 1.767A2.409 2.409 0 0 0 11.5 14c.69 0 1.28-.244 1.768-.733A2.408 2.408 0 0 0 14 11.5c0-.69-.244-1.28-.732-1.768A2.408 2.408 0 0 0 11.5 9z"/>
+			</symbol>
+			<symbol id="icon-cross" viewBox="0 0 24 24">
+				<title>cross</title>
+				<path d="M11.449 11.962l-5.1 5.099a.363.363 0 1 0 .513.512L12 12.436l5.137 5.137a.361.361 0 0 0 .513 0 .363.363 0 0 0 0-.512l-5.099-5.1 5.102-5.102a.363.363 0 1 0-.512-.513L12 11.487l-5.141-5.14a.363.363 0 0 0-.513.512l5.103 5.103z"/>
+			</symbol>
+			<symbol id="icon-arrowlong" viewBox="0 0 32 11">
+				<title>arrow-long</title>
+				<path d="M27.166.183a.619.619 0 0 0-.878 0 .619.619 0 0 0 0 .878l2.735 2.735H.768a.624.624 0 0 0 0 1.248h28.254L26.287 7.77a.619.619 0 0 0 0 .878.617.617 0 0 0 .441.183c.163 0 .32-.061.442-.183l3.796-3.796a.623.623 0 0 0-.005-.878L27.166.183z"/>
+			</symbol>
+			<symbol id="icon-close" viewBox="0 0 24 24">
+				<title>close</title>
+				<path d="M21 4.565L19.435 3 12 10.435 4.565 3 3 4.565 10.435 12 3 19.435 4.565 21 12 13.565 19.435 21 21 19.435 13.565 12z"/>
+			</symbol>
+			<symbol id="icon-navup" viewBox="0 0 50 50">
+				<title>navup</title>
+				<path d="M20.259 28.211l5.07-5.03 5.075 5.034a.36.36 0 0 0 .51 0 .356.356 0 0 0 0-.506l-5.323-5.28a.404.404 0 0 0-.135-.084.364.364 0 0 0-.384.08l-5.324 5.28a.356.356 0 0 0 0 .506c.141.14.37.14.51 0z" />
+			</symbol>
+			<symbol id="icon-navdown" viewBox="0 0 50 50">
+				<title>navdown</title>
+				<path d="M20.259 22.43l5.07 5.03 5.075-5.034a.36.36 0 0 1 .51 0c.14.14.14.366 0 .506l-5.323 5.28a.404.404 0 0 1-.135.084.364.364 0 0 1-.384-.081l-5.324-5.28a.356.356 0 0 1 0-.505c.141-.14.37-.14.51 0z" />
+			</symbol>
+			<symbol id="icon-grid" viewBox="0 0 24 24">
+				<title>grid</title>
+				<path d="M8.982 8.982h5.988v5.988H8.982zM0 0h5.988v5.988H0zM8.982 17.965h5.988v5.988H8.982zM0 8.982h5.988v5.988H0zM0 17.965h5.988v5.988H0zM17.965 0h5.988v5.988h-5.988zM8.982 0h5.988v5.988H8.982zM17.965 8.982h5.988v5.988h-5.988zM17.965 17.965h5.988v5.988h-5.988z"/>
+			</symbol>
+		</svg>
+		<main>
+			<div class="sections">
+				<header class="sections__header">
+					<!--<h1 class="title">Faye Gong</h1>-->
+				</header>
+				<!-- codrops links 
+				<div class="codrops-links">
+					<a class="codrops-icon codrops-icon--prev" href="https://tympanus.net/Development/GradientTopographyAnimation/" title="Previous Demo"><svg class="icon icon--arrow"><use xlink:href="#icon-menu"></use></svg></a>
+					<a class="codrops-icon codrops-icon--drop" href="https://tympanus.net/codrops/?p=33851" title="Back to the article"><svg class="icon icon--drop"><use xlink:href="#icon-drop"></use></svg></a>
+				</div>-->
+				<!-- menu -->
+				<nav class="menu">
+					<ul class="menu__inner">
+						<li class="menu__item"><a class="menu__item-link" href="#">Our Story</a></li>
+						<li class="menu__item"><a class="menu__item-link" href="#">Adventures</a></li>
+						<li class="menu__item"><a class="menu__item-link" href="#">Testimonials</a></li>
+						<li class="menu__item"><a class="menu__item-link" href="#">Contact</a></li>
+					</ul>
+					<div class="menu__toggle">
+						<span class="menu__toggle-inner menu__toggle-inner--open">
+							<!--<svg class="icon icon--menu"><use xlink:href="#icon-menu"></use></svg>-->
+						</span>
+						<span class="menu__toggle-inner menu__toggle-inner--close">
+							<svg class="icon icon--close"><use xlink:href="#icon-close"></use></svg>
+						</span>
+					</div>
+				</nav>
+				<!-- facts expander with toggles; content for each is in its section -->
+				<div class="facts">
+					<div class="facts__toggle">
+						<span class="facts__toggle-inner facts__toggle-inner--more">
+							<svg class="icon icon--dot"><use xlink:href="#icon-dot"></use></svg>
+							<span class="facts__toggle-text">More Details </span>
+						</span>
+						<span class="facts__toggle-inner facts__toggle-inner--less">
+							<svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg>
+							<span class="facts__toggle-text">Close</span>
+						</span>
+					</div>
+					<button class="button-contentclose">
+						<svg class="icon icon--close"><use xlink:href="#icon-close"></use></svg>
+					</button>
+				</div>
+				<!-- index -->
+				<div class="sections__index">
+					<span class="sections__index-current">
+						<span class="sections__index-inner">01</span>
+					</span>
+					<span class="sections__index-total">08</span>
+				</div>
+				<!-- navigation down -->
+				<nav class="sections__nav">
+					<button class="sections__nav-item sections__nav-item--prev">
+						<svg class="icon icon--navup"><use xlink:href="#icon-navup"></use></svg>
+					</button>
+					<button class="sections__nav-item sections__nav-item--next">
+						<svg class="icon icon--navdown"><use xlink:href="#icon-navdown"></use></svg>
+					</button>
+				</nav>
+				<!-- sections -->
+				<section class="section section--current">
+					<div class="section__content">
+						<h2 class="section__title">I'm &nbsp;Faye</h2>
+						<p class="section__description"><span class="section__description-inner">Building Human-centered AI Experiences <br>For Digital Consumer Products</span></p>
+					</div>
+					<div class="section__img">
+						<div class="section__img-inner" style="background-image: url(img/faye.png)"></div>
+					</div>
+					<div class="section__more">
+						<div class="section__more-inner section__more-inner--bg1">
+							<span class="section__more-text">Learn More From</span>
+							<a href="https://drive.google.com/file/d/1tF6Gixps7w63hrZ4SLeCvejCldN7Zgzr/view?usp=share_link" target="_blank" class="section__more-link">
+								<span class="section__more-linktext">Resume</span>
+								
+							</a>
+							<a href="https://www.linkedin.com/in/fayegong/" target="_blank" class="section__more-link">
+								<span class="section__more-linktext">Linkedin</span>
+								
+							</a>
+							<a href="https://github.com/YifeiGong" target="_blank" class="section__more-link">
+								<span class="section__more-linktext">Github</span>
+								
+							</a>
+						</div>
+					</div>
+					<div class="section__expander"></div>
+					<ul class="section__facts">
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Product Lead</h3>
+							<span class="section__facts-detail">5 YoE in Mobile + Web PM</span>
+							
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Product Innovation</h3>
+							<span class="section__facts-detail">Northwestern University</span>
+						</li>
+						<li class="section__facts-item">
+							
+							<span class="section__facts-detail">MS in Engineering Design<br>BS in Engineering + Marketing</span>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Interests</h3>
+							<span class="section__facts-detail">Life-long Learning<br>Reading<br>Solo-travel</span>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">ENTJ</h3>
+							<span class="section__facts-detail">Open-minded<br>Resourceful<br>Confident</span>
+						</li>
+						
+					</ul>
+
+				</section><!--/ section -->
+				<section class="section">
+					<div class="section__content">
+						<h2 class="section__title">J*Fit</h2>
+						<p class="section__description"><span class="section__description-inner">Top-ranking Fitness App on iOS, Android, Watch and Web</span></p>
+					</div>
+					<div class="section__img">
+						<div class="section__img-inner" style="background-image: url(img/jefit.png)"></div>
+					</div>
+					<div class="section__more">
+						<div class="section__more-inner section__more-inner--bg2">
+							<span class="section__more-text">Want to know more?</span>
+							<a href="faye-gong.webflow.io/j-fit" class="section__more-link">
+								<span class="section__more-linktext">Case Study</span>
+								<svg class="icon icon--arrowlong"><use xlink:href="#icon-arrowlong"></use></svg>
+							</a>
+						</div>
+					</div>
+					<div class="section__expander"></div>
+					<ul class="section__facts">
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Since May 2020</h3>
+							<span class="section__facts-detail">
+								Scaling to over 12M users</span>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Product-led Growth</h3>
+							<span class="section__facts-detail">Network Effect + Freemium</span>
+						</li>
+						<li class="section__facts-item">
+							<span class="section__facts-detail">
+							Tool-based Retention<br>
+							AI-driven Monetization<br>
+							Content-led Acquisition</span>
+						</li>	
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Experienced in</h3>
+							<span class="section__facts-detail">
+							Leading 20+ people full-stack<br>
+						Product research and development team </span>
+						</li>		
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Leadership</h3>
+							<span class="section__facts-detail">
+							Grow the team from 10 to 20<br>Mentor designers<br>and marketers</span>
+						</li>											
+						
+					</ul>
+					
+				</section><!--/ section -->
+				<section class="section">
+					<div class="section__content">
+						<h2 class="section__title">Bing</h2>
+						<p class="section__description"><span class="section__description-inner">Bing.com News "For You" Newsfeed at Microsoft 
+						</span></p>
+					</div>
+					<div class="section__img">
+						<div class="section__img-inner" style="background-image: url(img/bing.png)"></div>
+					</div>
+					<div class="section__more">
+						<div class="section__more-inner section__more-inner--bg3">
+							<span class="section__more-text">Want to know more?</span>
+							<a href="https://www.microsoft.com/en-us/bing/search-app-desktop" class="section__more-link">
+								<span class="section__more-linktext">Showcase</span>
+								<svg class="icon icon--arrowlong"><use xlink:href="#icon-arrowlong"></use></svg>
+							</a>
+						</div>
+					</div>
+					<div class="section__expander"></div>
+					<ul class="section__facts">
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Internship in 2019</h3>
+							<span class="section__facts-detail">Product Design and Research</span>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Released in 2021</h3>
+							<span class="section__facts-detail">New Bing Search Mobile App</span>
+						</li>
+
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">"Stay Focus"</h3>
+							<span class="section__facts-detail">Under "For You" Newsfeed</span>
+						</li>
+						<li class="section__facts-item">
+							<span class="section__facts-detail">Helping people to get <br>and digest relevant, <br>fast and unbiased news.</span>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Bing News Vertical</h3>
+							<span class="section__facts-detail">A news aggregator<br>in Bing Search Mobile App</span>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Methods</h3>
+							<span class="section__facts-detail">User Interviews<br>User Testing<br>Pen&Paper<br>Presentation<br>Figma<br>Competitor Analysis</span>
+						</li>							
+						
+					</ul>
+				</section><!--/ section -->
+				<section class="section">
+					<div class="section__content">
+						<h2 class="section__title">edtech</h2>
+						<p class="section__description"><span class="section__description-inner">Sunlands.com(NYSE:STG), top online post-secondary and professional education in China
+
+							
+</span></p>
+					</div>
+					<div class="section__img">
+						<div class="section__img-inner" style="background-image: url(img/sunlands.png)"></div>
+					</div>
+					<div class="section__more">
+						<div class="section__more-inner section__more-inner--bg4">
+							<span class="section__more-text">Want to know more?</span>
+							<a href="faye-gong.webflow.io/s" class="section__more-link">
+								<span class="section__more-linktext">Project Intro</span>
+								<svg class="icon icon--arrowlong"><use xlink:href="#icon-arrowlong"></use></svg>
+							</a>
+						</div>
+					</div>
+					<div class="section__expander"></div>
+					<ul class="section__facts">
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">PM 2016 - 2017</h3>
+							<span class="section__facts-detail">Mobile & Web</span>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">"Stay Engaged"</h3>
+							<span class="section__facts-detail">Messaging & Community</span>
+						</li>
+						<li class="section__facts-item">
+							<span class="section__facts-detail">Support online self-study<br>for part-time students</span>
+						</li>						
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Retention</h3>
+							<span class="section__facts-detail">Connecting students with peers <br>who have similar majors and goals</span>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Operation</h3>
+							<span class="section__facts-detail">Reducing repetitive manual works <br>from teachers by converting private chats <br>to public discussion</span>
+						</li>
+					</ul>
+				</section><!--/ section -->
+				<section class="section">
+					<div class="section__content">
+						<h2 class="section__title">travel</h2>
+						<p class="section__description"><span class="section__description-inner">Qyer.com, an online travel agency that operates e-commerce with community and user-generated content
+						</span></p>
+					</div>
+					<div class="section__img">
+						<div class="section__img-inner" style="background-image: url(img/qyer.png)"></div>
+					</div>
+					<div class="section__more">
+						<div class="section__more-inner section__more-inner--bg4">
+							<span class="section__more-text">Want to know more?</span>
+							<a href="faye-gong.webflow.io/qyer" class="section__more-link">
+								<span class="section__more-linktext">Project Intro</span>
+								<svg class="icon icon--arrowlong"><use xlink:href="#icon-arrowlong"></use></svg>
+							</a>
+						</div>
+					</div>
+					<div class="section__expander"></div>
+					<ul class="section__facts">
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">APM 2015 - 2016</h3>
+							<span class="section__facts-detail">Mobile Monetization</span>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">iOS "App of 2015"</h3>
+							<span class="section__facts-detail">Featured by App Store</span>
+						</li>
+						<li class="section__facts-item">
+							<span class="section__facts-detail">Top 10 finalist in China
+						<br>The only travel mobile app </span>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">"Stay Informed"</h3>
+							<span class="section__facts-detail">Adding the next dream destination <br>to wishlist and travel planner</span>
+						</li>						
+
+					</ul>
+				</section><!--/ section -->
+				<section class="section">
+					<div class="section__content">
+						<h2 class="section__title">Cou Cou</h2>
+						<p class="section__description"><span class="section__description-inner">Smart Light to optimize routines and improve productivity</span></p>
+					</div>
+					<div class="section__img">
+						<div class="section__img-inner" style="background-image: url(img/coucou.png)"></div>
+					</div>
+					<div class="section__more">
+						<div class="section__more-inner section__more-inner--bg4">
+							<span class="section__more-text">Want to know more?</span>
+							<a href="https://docs.google.com/presentation/d/1Aa_Cl71s_kldU4fPTHlZ3CFmABGS-Lery41GINafnvM/edit?usp=sharing" class="section__more-link">
+								<span class="section__more-linktext">Google Slides</span>
+								<svg class="icon icon--arrowlong"><use xlink:href="#icon-arrowlong"></use></svg>
+							</a>
+						</div>
+					</div>
+					<div class="section__expander"></div>
+					<ul class="section__facts">
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Client Project in 2019</h3>
+							<span class="section__facts-detail">For a Chicago Local Startup</span>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Human-centered Design</h3>
+							<span class="section__facts-detail">Fall-asleep and wake-up experiences</span>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Pain Point</h3>
+							<span class="section__facts-detail">"A tough wake-up...a less productive day..."</span>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Methods</h3>
+							<span class="section__facts-detail">2 weeks design sprint <br>+ Independent pivot project</span>
+						</li>									
+					</ul>
+				</section><!--/ section -->
+				<section class="section">
+					<div class="section__content">
+						<h2 class="section__title">XIA</h2>
+						<p class="section__description"><span class="section__description-inner">IoT system that helps to build healthier working habits for professionals</span></p>
+					</div>
+					<div class="section__img">
+						<div class="section__img-inner" style="background-image: url(img/xia.png)"></div>
+					</div>
+					<div class="section__more">
+						<div class="section__more-inner section__more-inner--bg4">
+							<span class="section__more-text">Want to know more?</span>
+							<a href="faye-gong.webflow.io/x" class="section__more-link">
+								<span class="section__more-linktext">Case Study</span>
+								<svg class="icon icon--arrowlong"><use xlink:href="#icon-arrowlong"></use></svg>
+							</a>
+						</div>
+					</div>
+					<div class="section__expander"></div>
+					<ul class="section__facts">
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Master's Thesis Project</h3>
+							<span class="section__facts-detail">At Northwestern University</span>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">IoT + AI</h3>
+							<span class="section__facts-detail">Smart Seat Cushion + App</span>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Pain Points</h3>
+							<span class="section__facts-detail">						
+								1. When should they take a break?<br>
+2. How to pose in an <br>ergonomically good way?<br>
+3. How long can they sit <br>comfortably until work ends?</span>
+						</li>						
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">DESIGN CHALLENGE</h3>
+							<span class="section__facts-detail">						
+								How might we make people <br>aware of their current sitting habits?</span>
+						</li>						
 
 
-         	<button class="close close--menu oh unbutton" aria-label="Close menu">
-         		<span class="oh__inner">&#10005;</span></button> </nav>
-         <button class="menu-link oh unbutton underline"><span class="oh__inner">Works</span></button> 
-         <h2 class="heading oh"><span class="oh__inner">Hi! I'm <strong>Faye</strong>, a Product Lead</span></h2>
-         <p class="content-primary">
-            Who loves Building<br>
-            Human-centered AI<br>
-            Consumer Experiences</p>
-         <p class="content-secondary">Leading Product R&D and Growth<br>
-            Scaling to over 12M users<br>
-            At JeFit since 2020<br>
-            </p>
 
-         <div class="deco" aria-hidden="true">
-            <div class="deco__img-wrap deco__img-wrap--upper">
-               <div class="deco__img deco__img--upper"></div>
-            </div>
-            <div class="deco__img-wrap deco__img-wrap--lower">
-               <div class="deco__img deco__img--lower"></div>
-            </div>
-         </div>
-         <section class="details-wrap">
-            
-            <div class="details" id="details-2">
-               <div class="panel"> <img class="panel__img pos-1" src="18.145b6e0b.jpg" alt="Some image"> <img class="panel__img pos-2" src="19.4e8371a2.jpg" alt="Some image"> <img class="panel__img pos-3" src="20.cb743775.jpg" alt="Some image"> <img class="panel__img pos-4" src="21.1ad7d602.jpg" alt="Some image"> <img class="panel__img pos-5" src="1.80b98c5b.jpg" alt="Some image"> <img class="panel__img pos-6" src="2.be0b6e97.jpg" alt="Some image"> <img class="panel__img pos-7" src="3.1667f2fd.jpg" alt="Some image"> <img class="panel__img pos-8" src="4.a242a4db.jpg" alt="Some image"> <img class="panel__img pos-9" src="5.cec98852.jpg" alt="Some image"> <img class="panel__img pos-10" src="6.63a71a70.jpg" alt="Some image"> <img class="panel__img pos-11" src="7.febd1f9e.jpg" alt="Some image"> <img class="panel__img pos-12" src="8.1ec50be9.jpg" alt="Some image"> <img class="panel__img pos-13" src="9.42343a9c.jpg" alt="Some image"> <img class="panel__img pos-14" src="10.09b8babf.jpg" alt="Some image"> <img class="panel__img pos-15" src="11.6bf710ad.jpg" alt="Some image"> <img class="panel__img pos-16" src="12.bd7243dc.jpg" alt="Some image"> </div>
-               <div class="details__content">
-                  <h3 class="details__content-title oh"><span class="oh__inner">Jefit</span></h3>
-                  <p class="details__content-text">
-                     Tool-based Retention<br>
-                     AI-driven Monetization<br>
-                     Content-led Acquisition</p>
-                  <a class="details__content-link oh"><span class="oh__inner">+ View Case Study</span></a> 
-               </div>
-            </div>
-            <div class="details" id="details-3">
-               <div class="panel"> <img class="panel__img pos-1" src="21.1ad7d602.jpg" alt="Some image"> <img class="panel__img pos-2" src="19.4e8371a2.jpg" alt="Some image"> <img class="panel__img pos-3" src="17.5d19143b.jpg" alt="Some image"> <img class="panel__img pos-4" src="15.9d1ab7d5.jpg" alt="Some image"> <img class="panel__img pos-5" src="13.eaca2609.jpg" alt="Some image"> <img class="panel__img pos-6" src="11.6bf710ad.jpg" alt="Some image"> <img class="panel__img pos-7" src="2.be0b6e97.jpg" alt="Some image"> <img class="panel__img pos-8" src="4.a242a4db.jpg" alt="Some image"> <img class="panel__img pos-9" src="6.63a71a70.jpg" alt="Some image"> <img class="panel__img pos-10" src="8.1ec50be9.jpg" alt="Some image"> <img class="panel__img pos-11" src="10.09b8babf.jpg" alt="Some image"> <img class="panel__img pos-12" src="12.bd7243dc.jpg" alt="Some image"> <img class="panel__img pos-13" src="14.8a0d313c.jpg" alt="Some image"> <img class="panel__img pos-14" src="16.3a8d5f7d.jpg" alt="Some image"> <img class="panel__img pos-15" src="18.145b6e0b.jpg" alt="Some image"> <img class="panel__img pos-16" src="20.cb743775.jpg" alt="Some image"> </div>
-               <div class="details__content">
-                  <h3 class="details__content-title oh"><span class="oh__inner">Bing.com</span></h3>
-                  <p class="details__content-text">News Vertical</p>
-                  <a class="details__content-link oh">
-                     <span class="oh__inner">+ View Case Study</span></a> 
-               </div>
-            </div>
-            <div class="details" id="details-4">
-               <div class="panel"> <img class="panel__img pos-1" src="2.be0b6e97.jpg" alt="Some image"> <img class="panel__img pos-2" src="3.1667f2fd.jpg" alt="Some image"> <img class="panel__img pos-3" src="4.a242a4db.jpg" alt="Some image"> <img class="panel__img pos-4" src="5.cec98852.jpg" alt="Some image"> <img class="panel__img pos-5" src="6.63a71a70.jpg" alt="Some image"> <img class="panel__img pos-6" src="7.febd1f9e.jpg" alt="Some image"> <img class="panel__img pos-7" src="8.1ec50be9.jpg" alt="Some image"> <img class="panel__img pos-8" src="9.42343a9c.jpg" alt="Some image"> <img class="panel__img pos-9" src="10.09b8babf.jpg" alt="Some image"> <img class="panel__img pos-10" src="11.6bf710ad.jpg" alt="Some image"> <img class="panel__img pos-11" src="12.bd7243dc.jpg" alt="Some image"> <img class="panel__img pos-12" src="13.eaca2609.jpg" alt="Some image"> <img class="panel__img pos-13" src="14.8a0d313c.jpg" alt="Some image"> <img class="panel__img pos-14" src="15.9d1ab7d5.jpg" alt="Some image"> <img class="panel__img pos-15" src="16.3a8d5f7d.jpg" alt="Some image"> <img class="panel__img pos-16" src="17.5d19143b.jpg" alt="Some image"> </div>
-               <div class="details__content">
-                  <h3 class="details__content-title oh"><span class="oh__inner">Sunlands.com</span></h3>
-                  <p class="details__content-text">Online education</p>
-                  <a class="details__content-link oh">
-                     <span class="oh__inner">+ View Case Study</span></a> 
-               </div>
-            </div>
-            <div class="details" id="details-5">
-               <div class="panel"> <img class="panel__img pos-1" src="21.1ad7d602.jpg" alt="Some image"> <img class="panel__img pos-2" src="19.4e8371a2.jpg" alt="Some image"> <img class="panel__img pos-3" src="17.5d19143b.jpg" alt="Some image"> <img class="panel__img pos-4" src="15.9d1ab7d5.jpg" alt="Some image"> <img class="panel__img pos-5" src="13.eaca2609.jpg" alt="Some image"> <img class="panel__img pos-6" src="11.6bf710ad.jpg" alt="Some image"> <img class="panel__img pos-7" src="2.be0b6e97.jpg" alt="Some image"> <img class="panel__img pos-8" src="4.a242a4db.jpg" alt="Some image"> <img class="panel__img pos-9" src="6.63a71a70.jpg" alt="Some image"> <img class="panel__img pos-10" src="8.1ec50be9.jpg" alt="Some image"> <img class="panel__img pos-11" src="10.09b8babf.jpg" alt="Some image"> <img class="panel__img pos-12" src="12.bd7243dc.jpg" alt="Some image"> <img class="panel__img pos-13" src="14.8a0d313c.jpg" alt="Some image"> <img class="panel__img pos-14" src="16.3a8d5f7d.jpg" alt="Some image"> <img class="panel__img pos-15" src="18.145b6e0b.jpg" alt="Some image"> <img class="panel__img pos-16" src="20.cb743775.jpg" alt="Some image"> </div>
-               <div class="details__content">
-                  <h3 class="details__content-title oh"><span class="oh__inner">Qyer.com</span></h3>
-                  <p class="details__content-text">Online Travel Agency</p>
-                  <a class="details__content-link oh">
-                     <span class="oh__inner">+ View Case Study</span></a> 
-               </div>
-            </div>
-            <div class="details" id="details-6">
-               <div class="panel"> <img class="panel__img pos-1" src="18.145b6e0b.jpg" alt="Some image"> <img class="panel__img pos-2" src="19.4e8371a2.jpg" alt="Some image"> <img class="panel__img pos-3" src="20.cb743775.jpg" alt="Some image"> <img class="panel__img pos-4" src="21.1ad7d602.jpg" alt="Some image"> <img class="panel__img pos-5" src="1.80b98c5b.jpg" alt="Some image"> <img class="panel__img pos-6" src="2.be0b6e97.jpg" alt="Some image"> <img class="panel__img pos-7" src="3.1667f2fd.jpg" alt="Some image"> <img class="panel__img pos-8" src="4.a242a4db.jpg" alt="Some image"> <img class="panel__img pos-9" src="5.cec98852.jpg" alt="Some image"> <img class="panel__img pos-10" src="6.63a71a70.jpg" alt="Some image"> <img class="panel__img pos-11" src="7.febd1f9e.jpg" alt="Some image"> <img class="panel__img pos-12" src="8.1ec50be9.jpg" alt="Some image"> <img class="panel__img pos-13" src="9.42343a9c.jpg" alt="Some image"> <img class="panel__img pos-14" src="10.09b8babf.jpg" alt="Some image"> <img class="panel__img pos-15" src="11.6bf710ad.jpg" alt="Some image"> <img class="panel__img pos-16" src="12.bd7243dc.jpg" alt="Some image"> </div>
-               <div class="details__content">
-                  <h3 class="details__content-title oh"><span class="oh__inner">AI for Wellness</span></h3>
-                  <p class="details__content-text">Sitting<br>
-                     Sleeping<br>
-                  Orthodontics</p>
-                  <a class="details__content-link oh"><span class="oh__inner">+ Read the story</span></a> 
-               </div>
-            </div>
-            <div class="details" id="details-7">
-               <div class="panel"> <img class="panel__img pos-1" src="18.145b6e0b.jpg" alt="Some image"> <img class="panel__img pos-2" src="19.4e8371a2.jpg" alt="Some image"> <img class="panel__img pos-3" src="20.cb743775.jpg" alt="Some image"> <img class="panel__img pos-4" src="21.1ad7d602.jpg" alt="Some image"> <img class="panel__img pos-5" src="1.80b98c5b.jpg" alt="Some image"> <img class="panel__img pos-6" src="2.be0b6e97.jpg" alt="Some image"> <img class="panel__img pos-7" src="3.1667f2fd.jpg" alt="Some image"> <img class="panel__img pos-8" src="4.a242a4db.jpg" alt="Some image"> <img class="panel__img pos-9" src="5.cec98852.jpg" alt="Some image"> <img class="panel__img pos-10" src="6.63a71a70.jpg" alt="Some image"> <img class="panel__img pos-11" src="7.febd1f9e.jpg" alt="Some image"> <img class="panel__img pos-12" src="8.1ec50be9.jpg" alt="Some image"> <img class="panel__img pos-13" src="9.42343a9c.jpg" alt="Some image"> <img class="panel__img pos-14" src="10.09b8babf.jpg" alt="Some image"> <img class="panel__img pos-15" src="11.6bf710ad.jpg" alt="Some image"> <img class="panel__img pos-16" src="12.bd7243dc.jpg" alt="Some image"> </div>
-               <div class="details__content">
-                  <h3 class="details__content-title oh"><span class="oh__inner">Faye Gong</span></h3>
-                  <p class="details__content-text">Faye is helping people and herself be more confident in achieving goals, through habit-forming, connected products, and seamless experience.<br><br>
-"Open-minded, resourceful, and confident" are how team members usually describe her.<br>
 
-                     </p>
-                  <a class="details__content-link oh" href="https://drive.google.com/file/d/1tF6Gixps7w63hrZ4SLeCvejCldN7Zgzr/view?usp=share_link" target="_blank"><span class="oh__inner">+ Résumé</span></a><br>
-                  <a class="details__content-link oh" href="https://www.linkedin.com/in/fayegong/" target="_blank"><span class="oh__inner">+ Linkedin</span></a> <br>
-                  <a class="details__content-link oh" href="fayeyfgong@gmail.com" target="mailto"><span class="oh__inner">+ Email</span></a> 
-               </div>
-            </div>
-            <button class="close close--details oh unbutton" aria-label="Close details"><span class="oh__inner">&#10005;</span></button> 
-         </section>
-      </main>
-      <script src="index.cad48f07.js"></script> 
-   </body>
+
+
+					</ul>
+				</section><!--/ section -->
+				<section class="section">
+					<div class="section__content">
+						<h2 class="section__title">Clarity</h2>
+						<p class="section__description"><span class="section__description-inner">3M™ Clear Aligner personalized end-to-end patient experiences</span></p>
+					</div>
+					<div class="section__img">
+						<div class="section__img-inner" style="background-image: url(img/3m.png)"></div>
+					</div>
+					<div class="section__more">
+						<div class="section__more-inner section__more-inner--bg4">
+							<span class="section__more-text">Want to know more?</span>
+							<a href="https://docs.google.com/presentation/d/1lCet6fAYNtpW6tzFy8GyXgFO-ojXnOC6JmTqm0Gox9k/edit?usp=sharing" target="_blank" class="section__more-link">
+								<span class="section__more-linktext">Google Slides</span>
+								<svg class="icon icon--arrowlong"><use xlink:href="#icon-arrowlong"></use></svg>
+							</a>
+						</div>
+					</div>
+					<div class="section__expander"></div>
+					<ul class="section__facts">
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Client Project in 2019</h3>
+							<span class="section__facts-detail">Design Strategy for 3M™</span>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">IoT + AI</h3>
+							<span class="section__facts-detail">Effortless Orthodontic Outcome</span>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Methods</h3>
+							<span class="section__facts-detail">
+								1 SmileDirectClub competitor interview<br>
+								4 Orthodontist & dentist interviews<br>
+								10 Invisalign user interviews 
+							</span>
+						</li>
+						<li class="section__facts-item">
+							
+							<span class="section__facts-detail">
+								Establish 3M as a strong competitor<br> in the oral health care market <br>beyond clear aligners. 
+							</span>
+						</li>
+
+						
+
+
+						
+
+
+
+					</ul>
+				</section><!--/ section -->
+			</div><!--/ sections -->
+		</main>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/charming.min.js"></script>
+		<script src="js/anime.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
 </html>
