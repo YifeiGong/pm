@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Online Education for Self-study Learner - Faye Gong's Portfolio</title>
+      <meta name="description" content="A page background effect where SVG shapes morph and transform on scroll" />
+      <meta name="keywords" content="background, svg, morph, animation, scroll, shape, web development, css, javascript" />
+      <meta name="author" content="Faye Gong" />
+      <link href="icon.png" rel="shortcut icon"/>
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:300, 400, 500, 600, 700|Rubik:300, 400,500,700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+      <link rel="stylesheet" type="text/css" href="css/demo.css" />
+      <link rel="stylesheet" type="text/css" href="css/page.css" />
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+      <link rel="stylesheet" type="text/css" href="css/sidebar.css" />
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136104655-1"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         
+         gtag('config', 'UA-136104655-1');
+      </script>
+      <script>
+         document.documentElement.className = 'js';
+         var supportsCssVars = function() {
+         	var s = document.createElement('style'),
+         	support;
+         
+         	s.innerHTML = "root: { --tmp-var: bold; }";
+         	document.head.appendChild(s);
+         	support = !!(window.CSS && window.CSS.supports && window.CSS.supports('font-weight', 'var(--tmp-var)'));
+         	s.parentNode.removeChild(s);
+         	return support;
+         }
+         if (!supportsCssVars()) alert('Please view this demo in a modern browser that supports CSS Variables.')
+      </script>
+      <style type="text/css"> 
+         hr { 
+         display: block;
+         margin-left: 80px;
+         margin-right: 20px;
+         border-width: 0.5px;
+         } 
+         h5 {color:#800000} 
+         h2 {color:#800000} 
+         span {background-color: #FFE4E1}
+      </style>
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body>
+      <main>
+      <script src="header.js"></script>
+      <div class="wrap">
+         <!-- Portfolio details start -->
+         <section style="background-color: #fff;">
+            <div class="portfolio-title">
+               <div class="container">
+                  <div class="row">
+                    
+                        <h1 style="color: #800000;">Sunlands.com</h1>
+                        <h3>Online Education Product for Self-study College Education</h3>
+                        <br>
+                        <h5 style="color: #800000;">Product Management, Mobile Product</h5>
+                        <p> <span>PROJECT</span> Full-time job<br>
+                           <span>TIMELINE</span> September 2016 - April 2017<br>
+                        </h5>
+                    
+                  </div>
+               </div>
+            </div>
+         </section>
+      </div>
+
+      <div class="main">
+      <div class="post-article">
+      <div class="contain">
+      <section class="about-section spad" id="about">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-6 about-text wow" data-wow-delay="0.1s">
+                  <div class="portfolio-details3">
+                  	 <img src="img/sdjg/images/1.png" alt="">					
+                     <h3>"Stay Engaged", in self-study journey with peers for part-time students - Sunlands Community</h3>
+                     <p>Sunlands.com targets professional people who seek self-study higher education undergraduate degree in China to achieve their next-level career goal.</p>
+                     <h5>Work Experience</h5>
+                     <p>I managed mobile community features, which served as the retention fuel to help students be more persistent in their learning journey. Close to 2 million students eventually got the degree with Sunlands.com's cohort-based programs.
+                     <h5>ROLE</h5>
+                     <p>Product Manager, Social and Community</p>
+                     <h5>CHALLENGE</h5>
+                     <p>
+                        Build an in-app community to:<br>
+                        1. Improve retention by connecting students with peers who have similar majors, schedules, and goals<br>
+                        2. Reduce repetitive manual works from teachers by converting private chat to public discussion
+                     </p>
+                     <h5>METHOD</h5>
+                     <p>Agile Development</p>
+                     <h5>OUTCOME</h5>
+                     <p>Weekly responded post +25%, weekly active users +10%
+                        <br>	<br>
+                        Some of my works released in 2016 are still playing key roles with high adoption in Sunlands APP and the community tab still takes 1st and 3rd tab. The "My cohort and school" feature also serves as a key touchpoint after user's onboarding.
+                        <br>	<br>
+                        Check it on <a href="https://apps.apple.com/cn/app/%E5%B0%9A%E5%BE%B7%E6%9C%BA%E6%9E%84/id1056448970#?platform=iphone">iOS</a>.
+                     </p>
+                     <img src="img/sdjg/images/2.png" alt="">					
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Portfolio details end -->
+      <br><br><br>
+      <!-- Footer section start -->
+      <script src="js/footer.js"></script>
+      <!-- Footer section end -->
+      <!--====== Jquery & Javascripts files  ======-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/jquery.scrollNav.min.js"></script>
+      <script>
+         $('.post-article').scrollNav({
+         	sections: 'h2',
+         	titleText: 'Sections',
+         	fixedMargin: 60
+         });
+         var $item = $('.scroll-nav-item');
+         $.each($item, function(){
+         	$text = $(this).find('a').html().toLowerCase();
+         	$(this).addClass($text);
+         });
+      </script>
+      <script src="js/jquery-2.1.4.min.js"></script>
+      <script src="js/jquery.nav.min.js"></script>
+      <script src="js/isotope.pkgd.min.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="js/magnific-popup.min.js"></script>
+      <script src="js/wow.min.js"></script>
+      <script src="js/scripts.js"></script>
+      <script src="js/jquery.jkit.1.2.16.min.js"></script>
+   </body>
+</html>

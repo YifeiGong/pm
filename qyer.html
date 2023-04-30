@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Online Tourism Product - Faye Gong's Portfolio</title>
+      <meta name="description" content="A page background effect where SVG shapes morph and transform on scroll" />
+      <meta name="keywords" content="background, svg, morph, animation, scroll, shape, web development, css, javascript" />
+      <meta name="author" content="Faye Gong" />
+      <link href="icon.png" rel="shortcut icon"/>
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:300, 400, 500, 600, 700|Rubik:300, 400,500,700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+      <link rel="stylesheet" type="text/css" href="css/demo.css" />
+      <link rel="stylesheet" type="text/css" href="css/page.css" />
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+      <link rel="stylesheet" type="text/css" href="css/sidebar.css" />
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136104655-1"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         
+         gtag('config', 'UA-136104655-1');
+      </script>
+      <script>
+         document.documentElement.className = 'js';
+         var supportsCssVars = function() {
+         	var s = document.createElement('style'),
+         	support;
+         
+         	s.innerHTML = "root: { --tmp-var: bold; }";
+         	document.head.appendChild(s);
+         	support = !!(window.CSS && window.CSS.supports && window.CSS.supports('font-weight', 'var(--tmp-var)'));
+         	s.parentNode.removeChild(s);
+         	return support;
+         }
+         if (!supportsCssVars()) alert('Please view this demo in a modern browser that supports CSS Variables.')
+      </script>
+      <style type="text/css"> 
+         hr { 
+         display: block;
+         margin-left: 80px;
+         margin-right: 20px;
+         border-width: 0.5px;
+         } 
+         h5 {color:#2E8B57} 
+         h2 {color:#2E8B57} 
+         span {background-color: #F0FFF0}
+      </style>
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body>
+      <main>
+      <script src="header.js"></script>
+      <div class="wrap">
+         <!-- Portfolio details start -->
+         <section style="background-color: #fff;">
+            <div class="portfolio-title">
+               <div class="container">
+                  <div class="row">
+                     <h1 style="color: #2E8B57;">QYER</h1>
+                     <h3>Community-based Online Travel Agency Mobile Product Monetization</h3>
+                     <br>
+                     <h5 style="color: #2E8B57;">Product Management</h5>
+                     <p> <span>PROJECT</span> Part-time Job<br>
+                        <span>TIMELINE</span> September 2015 - August 2016<br>
+                     </h5>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </div>
+      <div class="main">
+      <div class="post-article">
+      <div class="contain">
+      <section id="A">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-6 about-text wow fadeInDown" data-wow-delay="0.1s">
+                  <div class="about-title">
+                     <div class="portfolio-details3">
+                     	<img src="img/qyer/images/1.png" alt="">			
+                        <h3>"Stay informed" with your next dream destination - Qyer Wishlist</h3>
+                        <p>
+                           Qyer.com is the largest bag-pack traveling UGC based online travel agency.
+                           <br><br>
+                           Wishlist feature connects user's initiative with various travel related updates and served as a key part of in-app monetization strategy.
+                           <br><br>
+                           Qyer app was featured as the finalist of iOS App Store "App of 2015" as the only travel mobile app.
+                        </p>
+                        <h5>ROLE</h5>
+                        <p>Associate Product Manager, Core and Monetization
+                           <br><br>
+                           Led user research, and worked on strategy and flow design, product management, and product release
+                        </p>
+                        <h5>CHALLENGE</h5>
+                        <p>
+                           How to define the right timing and touchpoint to show various updates from users saved destination?
+                        </p>
+                        <h5>OUTCOME</h5>
+                        <p>
+                           1. A shortcut collection that lead users to wishlist destinations in the search page<br>
+                           2. A wishlist destination filter that can send notification to targeted users who have saved a certain destination/country to wishlist<br><br>
+                           Wishlist is still a core feature in Qyer mobile apps. Feel free to checkout it in the iOS .
+                        </p>
+                        <img src="img/qyer/images/2.png" alt="">			
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Portfolio details end -->
+      <br><br><br>
+      <!-- Footer section start -->
+      <script src="js/footer.js"></script>
+      <!-- Footer section end -->
+      <!--====== Jquery & Javascripts files  ======-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/jquery.scrollNav.min.js"></script>
+      <script>
+         $('.post-article').scrollNav({
+         	sections: 'h2',
+         	titleText: 'Sections',
+         	fixedMargin: 60
+         });
+         var $item = $('.scroll-nav-item');
+         $.each($item, function(){
+         	$text = $(this).find('a').html().toLowerCase();
+         	$(this).addClass($text);
+         });
+      </script>
+      <script src="js/jquery-2.1.4.min.js"></script>
+      <script src="js/jquery.nav.min.js"></script>
+      <script src="js/isotope.pkgd.min.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="js/magnific-popup.min.js"></script>
+      <script src="js/wow.min.js"></script>
+      <script src="js/scripts.js"></script>
+      <script src="js/jquery.jkit.1.2.16.min.js"></script>
+   </body>
+</html>

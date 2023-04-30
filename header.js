@@ -1,0 +1,16 @@
+document.write('<div class="homefixed">');
+document.write('								<header>');
+document.write('');
+document.write('				');
+document.write('				<nav class="homefixed">');
+document.write('					<div class="homeleft">');
+document.write('					<a class="home homecurrent" href="index.html">FAYE GONG</a>');
+document.write('				</div>');
+document.write('					<div class="homeright">');
+document.write('					<a class="home" href="about.html">About Me</a>');
+document.write('					');
+document.write('				</div>');
+document.write('				</nav>');
+document.write('');
+document.write('				</header>');
+document.write('			</div>');
