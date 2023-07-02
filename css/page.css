@@ -308,10 +308,10 @@ hometitle
 .home {
 	display: inline-block;
 	position: relative;
-	font-family: "Montserrat", sans-serif;
+	font-family: freight-big-pro, "Minion Pro", serif;
 	margin: 0em 2em 1em 0em;
 	padding: 0;
-	font-weight: 300;
+	
 	font-size: 14px;
 	color:#a9a9a9;
 
@@ -332,6 +332,7 @@ hometitle
 }
 
 .homecurrent {
+
 	color: #000;
 	border-color: currentColor;
 	font-weight: 400;
@@ -413,18 +414,18 @@ hometitle
 
 
 .homecontent h3{
-	font-family: 'Playfair Display', serif;
+	font-family: freight-big-pro, "Minion Pro", serif;
 	
-	font-weight: 500;
+	
 	color: #000; 
 	font-size: 56px;
 	line-height: 1.2;
 } 
 
 .homecontent h5{
-	font-family: 'Playfair Display', serif;
+	font-family: freight-big-pro, "Minion Pro", serif;
 	line-height: 60px;
-	font-weight: 500;
+	
 	color: #000; 
 	font-size: 36px;
 } 
@@ -519,8 +520,8 @@ homewrap
 
 .photobox_type16 .photobox__label h3{
 
-	font-family: 'Playfair Display', serif;
-	font-weight: 500;
+	font-family: freight-big-pro, "Minion Pro", serif;
+	
 	font-size: 32px;
 	line-height: 44px;
 	
@@ -584,8 +585,8 @@ homewrap
 
 
 .wrapframe h3{
-	font-family: 'Playfair Display', serif;
-	font-weight: 600;
+	font-family: freight-big-pro, "Minion Pro", serif;
+	
 	font-size: 50px;
 	line-height: 54px;
 	
@@ -822,11 +823,11 @@ projectwrap
 	
 }
 .portfolio-details3 h1 {
-	font-family: 'Playfair Display', serif;
+	font-family: freight-big-pro, "Minion Pro", serif;
 	text-transform: uppercase;
 	color: #C0C0C0;
 	font-size: 50px;
-	font-weight: 500;
+	
 	margin-top: 100px;
 	text-align: center;
 
@@ -845,10 +846,10 @@ projectwrap
 }
 
 .portfolio-details3 h3 {
-	font-family: 'Playfair Display', serif;
+	font-family: freight-big-pro, "Minion Pro", serif;
 	color: #373737;
 	font-size: 30px;
-	font-weight: 600;
+	
 	line-height: 50px;
 	text-align: left;
 	padding-top: 10px;
@@ -878,12 +879,12 @@ projectwrap
 }
 
 .portfolio-details3 h6 {
-	font-family: 'Playfair Display', serif;
+	font-family: freight-big-pro, "Minion Pro", serif;
 	color: #333333;
 	font-size: 22px;
 	line-height: 1.7;
 	text-align: left;
-	font-weight: 400;
+	
 }
 
 
