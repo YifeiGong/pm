@@ -98,8 +98,8 @@ a:focus {
 
 .menu__item {
 	flex: none;
-	margin-right: 4rem;
-	padding: 0 2rem 0 0;
+	margin-right: 0;
+	
 }
 
 .menu__item-inner-no {
