@@ -72,13 +72,13 @@ main {
     position: relative;
 }
 .oh {
-    display: inline-flex;
+    display: inline;
     position: relative;
     overflow: hidden;
 }
 .oh__inner {
     will-change: transform;
-    display: inline-block;
+    display: inline-flex;
 }
 
 .frame {
@@ -180,7 +180,7 @@ main {
     display: inline-flex;
 }
 .intro .oh__inner {
-    padding: 0 0.8vw;
+    
 }
 .intro em.oh__inner {
     padding: 0 0.8vw;
@@ -233,6 +233,7 @@ main {
     font-style: italic;
     font-weight: 300;
     display: flex;
+
 }
 .meta__title .oh__inner {
     padding: 0 0.25rem;
