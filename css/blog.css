@@ -1,48 +1,55 @@
+/* Add these rules to your existing blog.css file */
+
 .blog {
-	position: relative;
-	padding: 60px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    padding: 5% 15%;
+
 }
 
-.blog__wrapper {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
+.blog img {
+    width: 100%;
+
 }
 
 .blog__post {
-	margin-right: 30px;
-	width: 33.33%;
+    flex: 1 1 70%;
+    max-width: 600px;
 }
 
-.blog__post:last-child {
-	margin-right: 0;
+.blog__sidebar {
+    flex: 1 1 25%;
+    min-width: 100px;
 }
 
-.blog__post-thumbnail {
-	width: 100%;
-	box-shadow: 5px 8px 30px 1px rgba(0,0,0,0.21);
+.blog__sidebar-section {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
-.blog__post-thumbnail img {
-	display: block;
-	width: 100%;
+.blog__sidebar-section h4 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
 }
 
-.blog__post-excerpt h3 {
-	color: #585858;
-	font-size: 24px;
+.blog__sidebar-section ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.blog__view-more {
-	margin-top: 90px;
-	text-align: center;
+.blog__sidebar-section li {
+    margin-bottom: 5px;
 }
 
-.blog__view-more--el {
-	padding: 8px 30px;
+@media (max-width: 900) {
+    .blog__post,{
+    	padding: 6%;
+    }
+    .blog__sidebar {
+        flex: 1 1 100%;
+    }
 }
